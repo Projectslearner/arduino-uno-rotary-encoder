@@ -1,71 +1,61 @@
-# Rotary Encoder with Stepper Motor Control
+# Arduino Uno Rotary Encoder Simple
 
 #### Project Overview
 
-This project demonstrates the use of a rotary encoder with an Arduino to control the speed and direction of a stepper motor. The rotary encoder allows for precise user input, which is translated into stepper motor movements. The stepper motor's speed and direction are adjusted based on the rotation of the encoder.
+This project demonstrates how to use a rotary encoder with an Arduino Uno to detect rotational movements and monitor the encoder's position. A push-button integrated into the encoder is also utilized.
 
 #### Components Needed
 
-1. **Arduino Board**
-2. **Rotary Encoder**
-3. **Stepper Motor**
-4. **Stepper Motor Driver (e.g., A4988)**
-5. **Power Supply for Stepper Motor**
+- **Arduino Uno**
+- **Rotary Encoder Module**
+- **Jumper Wires**
+- **Breadboard**
 
-### Block Diagram
+#### Block diagram
 
 
-#### Pin Connections
+#### Circuit Setup
 
-- **Rotary Encoder:**
-  - **CLK (Clock)**: Connect to digital pin 2
-  - **DT (Data)**: Connect to digital pin 3
-  - **SW (Switch)**: Connect to digital pin (optional)
-
-- **Stepper Motor Driver:**
-  - **Step Pin**: Connect to digital pin 2
-  - **Direction Pin**: Connect to digital pin 3
-  - **Enable Pin**: Connect to digital pin 4
+1. **Connect Rotary Encoder to Arduino Uno:**
+   - Connect the CLK pin of the rotary encoder to digital pin 2 on the Arduino Uno.
+   - Connect the DT pin of the rotary encoder to digital pin 3 on the Arduino Uno.
+   - Connect the SW (push-button) pin of the rotary encoder to digital pin 4 on the Arduino Uno.
+   - Ensure to use pull-up resistors or activate internal pull-ups on the Arduino Uno pins if needed.
 
 #### Instructions
 
-1. **Set Up the Circuit:**
-   - Connect the rotary encoder and stepper motor driver to the Arduino as per the defined pin connections.
-   - Ensure the stepper motor driver is powered correctly and connected to the stepper motor.
+1. **Circuit Setup:**
+   - Wire up the rotary encoder module to the Arduino Uno as per the circuit setup section.
 
-2. **Initialize the System:**
-   - Set the enable pin of the stepper motor driver as an output and enable the motor driver.
-   - Initialize the AccelStepper library to control the stepper motor.
+2. **Code Upload:**
+   - Open the Arduino IDE and create a new sketch.
+   - Copy and paste the provided Arduino code into the sketch.
 
-3. **Control Stepper Motor Speed:**
-   - Set the maximum speed and target speed of the stepper motor using the `setMaxSpeed()` and `setSpeed()` functions.
-   - Adjust the target speed based on the rotation of the rotary encoder.
-
-4. **Monitor Encoder Input:**
-   - Continuously read the rotary encoder's rotation to determine user input.
-   - Translate the encoder input into adjustments to the stepper motor's speed and direction.
-
-5. **Drive the Stepper Motor:**
-   - Use the `runSpeed()` function of the AccelStepper library to move the stepper motor at the specified speed and direction.
+3. **Testing:**
+   - Upload the code to the Arduino Uno.
+   - Open the serial monitor with a baud rate of 9600.
+   - Rotate the rotary encoder and observe the position value printed in the Serial Monitor.
+   - Press the integrated push-button to trigger actions in your project.
 
 #### Applications
 
-- **Motorized Control Systems:** Implement motorized control systems for various applications, such as robotics, CNC machines, or camera sliders.
-- **User Interface Devices:** Create user interface devices with rotary encoders for precise user input, controlling stepper motors for feedback or actuation.
-- **Automation Projects:** Incorporate rotary encoders and stepper motors into automation projects for precise control and movement.
+- **User Input Devices:** Ideal for creating user input interfaces or menu navigation systems.
+- **Rotational Monitoring:** Use in applications where precise rotational movements need to be tracked.
+- **Interactive Projects:** Incorporate rotary encoders for interactive control in Arduino-based projects.
 
 #### Notes
 
-- Ensure that the stepper motor driver is compatible with the stepper motor and Arduino board used in the project.
-- Adjust the maximum speed, target speed, and acceleration parameters of the stepper motor to suit the specific application requirements.
+- Ensure the rotary encoder is correctly connected and powered according to the specifications.
+- Modify the code to implement specific functionalities based on encoder movements and button presses.
+- Explore advanced features of rotary encoders such as quadrature encoding for finer control.
 
 ---
 
-🌐 [projectslearner.com](https://projectslearner.com)  
+🌐 [ProjectsLearner](https://projectslearner.com/learn/arduino-uno-rotary-encoder-simple)  
 📧 [projectslearner@gmail.com](mailto:projectslearner@gmail.com)  
 📸 [Instagram](https://www.instagram.com/projectslearner/)  
 📘 [Facebook](https://www.facebook.com/projectslearner)  
 ▶️ [YouTube](https://www.youtube.com/@ProjectsLearner)  
-📘 [LinkedIn](https://www.linkedin.com/in/projectslearner)  
+📘 [LinkedIn](https://www.linkedin.com/in/projectslearner)
 
-Made for you with ❣️ from ProjectsLearner
+Crafted with ❤️ by ProjectsLearner
